@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="font-sans bg-gray-50">
+  <!-- Header & Navigation -->
+  <header class="fixed w-full z-50 bg-white/90 backdrop-blur-sm shadow-sm">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <div class="flex items-center">
+        <div class="w-12 h-12 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold text-xl mr-3">
+          DK
+        </div>
+        <h1 class="text-2xl font-bold text-gray-800">
+          <span class="text-blue-500">Web</span> Desa
+        </h1>
+      </div>
+      
+      <nav class="hidden md:block">
+        <ul class="flex space-x-8">
+          <li><a href="/" class="nav-link text-gray-700 hover:text-blue-500 font-medium">Beranda</a></li>
+          <li><a href="/berita" class="nav-link text-gray-700 hover:text-blue-500 font-medium">Berita</a></li>
+          <li><a href="/penduduk" class="nav-link text-blue-500 font-medium">Data Penduduk</a></li>
+        </ul>
+      </nav>
+      
+      <button class="md:hidden text-gray-700 focus:outline-none">
+        <i class="fas fa-bars text-2xl"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Data Penduduk Section -->
+  <section id="penduduk" class="pt-24 py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+          Data <span class="text-blue-500">Penduduk</span>
+        </h2>
+        <div class="w-20 h-1 bg-blue-500 mx-auto mb-6"></div>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+          Informasi data penduduk desa yang terdaftar dalam sistem.
+        </p>
+      </div>
+      
+      <!-- Add Data Form -->
+      <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-8">
+        <h3 class="text-xl font-bold text-gray-800 mb-4">
+          <i class="fas fa-plus mr-2 text-blue-500"></i>Tambah Data Penduduk
+        </h3>
+        <form id="addPendudukForm" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+          <input type="text" id="nik" placeholder="NIK" class="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+          <input type="text" id="nama" placeholder="Nama Lengkap" class="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+          <input type="text" id="alamat" placeholder="Alamat" class="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+          <input type="text" id="rt" placeholder="RT" class="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+          <input type="text" id="rw" placeholder="RW" class="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+          <button type="submit" class="md:col-span-2 lg:col-span-5 bg-blue-600 text-white py-3 rounded-lg font-medium hover:bg-blue-700 transition duration-300">
+            <i class="fas fa-save mr-2"></i>Simpan Data
+          </button>
+        </form>
+      </div>
+
+      <!-- Data Table -->
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+        <div class="overflow-x-auto">
+          <table class="min-w-full">
+            <thead class="bg-gradient-to-r from-blue-500 to-blue-600 text-white">
+              <tr>
+                <th class="px-6 py-4 text-left text-sm font-semibold">No</th>
+                <th class="px-6 py-4 text-left text-sm font-semibold">NIK</th>
+                <th class="px-6 py-4 text-left text-sm font-semibold">Nama</th>
+                <th class="px-6 py-4 text-left text-sm font-semibold">Alamat</th>
+                <th class="px-6 py-4 text-left text-sm font-semibold">RT/RW</th>
+                <th class="px-6 py-4 text-left text-sm font-semibold">Tanggal Daftar</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-200">
+              <% if (penduduk.length > 0) { %>
+                <% penduduk.forEach(function(item, index) { %>
+                  <tr class="hover:bg-gray-50 transition-colors duration-200">
+                    <td class="px-6 py-4 text-sm text-gray-900"><%= index + 1 %></td>
+                    <td class="px-6 py-4 text-sm text-gray-900"><%= item.nik %></td>
+                    <td class="px-6 py-4 text-sm font-medium text-gray-900"><%= item.nama %></td>
+                    <td class="px-6 py-4 text-sm text-gray-600"><%= item.alamat || '-' %></td>
+                    <td class="px-6 py-4 text-sm text-gray-600"><%= item.rt || '-' %>/<%= item.rw || '-' %></td>
+                    <td class="px-6 py-4 text-sm text-gray-600"><%= new Date(item.created_at).toLocaleDateString('id-ID') %></td>
+                  </tr>
+                <% }); %>
+              <% } else { %>
+                <tr>
+                  <td colspan="6" class="px-6 py-12 text-center">
+                    <i class="fas fa-users text-gray-400 text-5xl mb-4"></i>
+                    <h3 class="text-xl font-bold text-gray-600 mb-2">Belum ada data penduduk</h3>
+                    <p class="text-gray-500">Tambahkan data penduduk menggunakan form di atas.</p>
+                  </td>
+                </tr>
+              <% } %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-6">
+      <div class="text-center">
+        <div class="flex items-center justify-center mb-6">
+          <div class="w-12 h-12 rounded-full bg-blue-600 flex items-center justify-center text-white font-bold text-xl mr-3">
+            DK
+          </div>
+          <div>
+            <h3 class="text-xl font-bold">Web Desa</h3>
+            <p class="text-gray-400 text-sm">Portal Informasi Desa</p>
+          </div>
+        </div>
+        <div class="border-t border-gray-800 pt-6">
+          <p class="text-gray-500 text-sm">
+            © 2024 Web Desa. Dibuat dengan ❤️ untuk melayani warga.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Form submission for adding penduduk
+    document.getElementById('addPendudukForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      
+      const nik = document.getElementById('nik').value;
+      const nama = document.getElementById('nama').value;
+      const alamat = document.getElementById('alamat').value;
+      const rt = document.getElementById('rt').value;
+      const rw = document.getElementById('rw').value;
+      
+      try {
+        const response = await fetch('/api/penduduk', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ nik, nama, alamat, rt, rw })
+        });
+        
+        const result = await response.json();
+        
+        if (result.success) {
+          alert('Data penduduk berhasil ditambahkan!');
+          location.reload();
+        } else {
+          alert('Error: ' + result.message);
+        }
+      } catch (error) {
+        alert('Terjadi kesalahan: ' + error.message);
+      }
+    });
+  </script>
+</body>
+</html>
