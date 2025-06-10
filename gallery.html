@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri - Desa Kapoya</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Header & Navigation -->
+    <header class="fixed w-full z-50 bg-white/90 backdrop-blur-sm shadow-sm">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="assets/img/Logo Kapoya.jpg" 
+                     alt="Logo Desa Kapoya" 
+                     class="w-12 h-12 rounded-full object-cover mr-3 border-2 border-blue-500"
+                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                <div class="w-12 h-12 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold text-xl mr-3" style="display: none;">DK</div>
+                <div>
+                    <h1 class="text-2xl font-bold text-gray-800">
+                        <span class="text-blue-500">Desa</span> Kapoya
+                    </h1>
+                    <p class="text-sm text-gray-600">Galeri Foto</p>
+                </div>
+            </div>
+            
+            <nav class="hidden md:block">
+                <ul class="flex space-x-8">
+                    <li><a href="index.html" class="nav-link text-gray-700 hover:text-blue-500 font-medium">Beranda</a></li>
+                    <li><a href="profile.html" class="nav-link text-gray-700 hover:text-blue-500 font-medium">Profil Desa</a></li>
+                    <li><a href="services.html" class="nav-link text-gray-700 hover:text-blue-500 font-medium">Pelayanan</a></li>
+                    <li><a href="news.html" class="nav-link text-gray-700 hover:text-blue-500 font-medium">Berita</a></li>
+                    <li><a href="gallery.html" class="nav-link text-blue-500 font-medium border-b-2 border-blue-500">Galeri</a></li>
+                    <li><a href="contact.html" class="nav-link text-gray-700 hover:text-blue-500 font-medium">Kontak</a></li>
+                </ul>
+            </nav>
+            
+            <button class="md:hidden text-gray-700 focus:outline-none" id="mobile-menu-button">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-16 bg-gradient-to-r from-indigo-500 to-indigo-600">
+        <div class="container mx-auto px-4 text-center text-white">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Galeri Desa Kapoya</h1>
+            <p class="text-xl opacity-90 max-w-2xl mx-auto">Dokumentasi kegiatan, fasilitas, dan keindahan alam Desa Kapoya</p>
+        </div>
+    </section>
+
+    <!-- Gallery Categories -->
+    <section class="py-8 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap justify-center gap-4">
+                <button class="gallery-filter px-6 py-2 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition-colors duration-300" data-filter="all">Semua</button>
+                <button class="gallery-filter px-6 py-2 bg-gray-200 text-gray-700 rounded-full hover:bg-gray-300 transition-colors duration-300" data-filter="kegiatan">Kegiatan</button>
+                <button class="gallery-filter px-6 py-2 bg-gray-200 text-gray-700 rounded-full hover:bg-gray-300 transition-colors duration-300" data-filter="fasilitas">Fasilitas</button>
+                <button class="gallery-filter px-6 py-2 bg-gray-200 text-gray-700 rounded-full hover:bg-gray-300 transition-colors duration-300" data-filter="alam">Alam</button>
+                <button class="gallery-filter px-6 py-2 bg-gray-200 text-gray-700 rounded-full hover:bg-gray-300 transition-colors duration-300" data-filter="budaya">Budaya</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="gallery-grid">
+                <!-- Gallery Item 1 -->
+                <div class="gallery-item bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300" data-category="kegiatan">
+                    <div class="h-64 bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center relative group cursor-pointer">
+                        <div class="text-center">
+                            <i class="fas fa-users text-5xl text-blue-500 mb-3"></i>
+                            <p class="text-gray-600 font-medium">Musyawarah Desa</p>
+                        </div>
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <i class="fas fa-search-plus text-white text-2xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">Musyawarah Desa Tahun 2024</h3>
+                        <p class="text-gray-600 text-sm">Kegiatan musyawarah perencanaan pembangunan desa untuk tahun 2024</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 2 -->
+                <div class="gallery-item bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300" data-category="fasilitas">
+                    <div class="h-64 bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center relative group cursor-pointer">
+                        <div class="text-center">
+                            <i class="fas fa-building text-5xl text-green-500 mb-3"></i>
+                            <p class="text-gray-600 font-medium">Kantor Desa</p>
+                        </div>
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <i class="fas fa-search-plus text-white text-2xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">Kantor Desa Kapoya</h3>
+                        <p class="text-gray-600 text-sm">Gedung kantor desa yang baru direnovasi dengan fasilitas modern</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 3 -->
+                <div class="gallery-item bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300" data-category="alam">
+                    <div class="h-64 bg-gradient-to-br from-yellow-100 to-yellow-200 flex items-center justify-center relative group cursor-pointer">
+                        <div class="text-center">
+                            <i class="fas fa-mountain text-5xl text-yellow-500 mb-3"></i>
+                            <p class="text-gray-600 font-medium">Pemandangan Alam</p>
+                        </div>
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <i class="fas fa-search-plus text-white text-2xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">Pemandangan Pegunungan</h3>
+                        <p class="text-gray-600 text-sm">Keindahan alam pegunungan yang mengelilingi Desa Kapoya</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 4 -->
+                <div class="gallery-item bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300" data-category="kegiatan">
+                    <div class="h-64 bg-gradient-to-br from-red-100 to-red-200 flex items-center justify-center relative group cursor-pointer">
+                        <div class="text-center">
+                            <i class="fas fa-seedling text-5xl text-red-500 mb-3"></i>
+                            <p class="text-gray-600 font-medium">Program Pertanian</p>
+                        </div>
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <i class="fas fa-search-plus text-white text-2xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">Pelatihan Pertanian Organik</h3>
+                        <p class="text-gray-600 text-sm">Kegiatan pelatihan pertanian organik untuk petani desa</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 5 -->
+                <div class="gallery-item bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300" data-category="budaya">
+                    <div class="h-64 bg-gradient-to-br from-purple-100 to-purple-200 flex items-center justify-center relative group cursor-pointer">
+                        <div class="text-center">
+                            <i class="fas fa-music text-5xl text-purple-500 mb-3"></i>
+                            <p class="text-gray-600 font-medium">Seni Budaya</p>
+                        </div>
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <i class="fas fa-search-plus text-white text-2xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">Festival Budaya Desa</h3>
+                        <p class="text-gray-600 text-sm">Pentas seni dan budaya tradisional masyarakat Desa Kapoya</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 6 -->
+                <div class="gallery-item bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300" data-category="fasilitas">
+                    <div class="h-64 bg-gradient-to-br from-indigo-100 to-indigo-200 flex items-center justify-center relative group cursor-pointer">
+                        <div class="text-center">
+                            <i class="fas fa-book text-5xl text-indigo-500 mb-3"></i>
+                            <p class="text-gray-600 font-medium">Perpustakaan</p>
+                        </div>
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <i class="fas fa-search-plus text-white text-2xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">Perpustakaan Desa</h3>
+                        <p class="text-gray-600 text-sm">Fasilitas perpustakaan desa dengan koleksi buku yang lengkap</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 7 -->
+                <div class="gallery-item bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300" data-category="alam">
+                    <div class="h-64 bg-gradient-to-br from-teal-100 to-teal-200 flex items-center justify-center relative group cursor-pointer">
+                        <div class="text-center">
+                            <i class="fas fa-tree text-5xl text-teal-500 mb-3"></i>
+                            <p class="text-gray-600 font-medium">Hutan Desa</p>
+                        </div>
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <i class="fas fa-search-plus text-white text-2xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">Hutan Konservasi</h3>
+                        <p class="text-gray-600 text-sm">Area hutan konservasi yang dijaga oleh masyarakat desa</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 8 -->
+                <div class="gallery-item bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300" data-category="kegiatan">
+                    <div class="h-64 bg-gradient-to-br from-pink-100 to-pink-200 flex items-center justify-center relative group cursor-pointer">
+                        <div class="text-center">
+                            <i class="fas fa-hands-helping text-5xl text-pink-500 mb-3"></i>
+                            <p class="text-gray-600 font-medium">Gotong Royong</p>
+                        </div>
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <i class="fas fa-search-plus text-white text-2xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">Gotong Royong Masyarakat</h3>
+                        <p class="text-gray-600 text-sm">Kegiatan gotong royong membangun fasilitas umum desa</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 9 -->
+                <div class="gallery-item bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300" data-category="fasilitas">
+                    <div class="h-64 bg-gradient-to-br from-orange-100 to-orange-200 flex items-center justify-center relative group cursor-pointer">
+                        <div class="text-center">
+                            <i class="fas fa-road text-5xl text-orange-500 mb-3"></i>
+                            <p class="text-gray-600 font-medium">Infrastruktur</p>
+                        </div>
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <i class="fas fa-search-plus text-white text-2xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">Jalan Desa Baru</h3>
+                        <p class="text-gray-600 text-sm">Pembangunan jalan beton yang menghubungkan antar dusun</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="text-center mt-12">
+                <button class="bg-blue-500 text-white px-8 py-3 rounded-lg hover:bg-blue-600 transition-colors duration-300">
+                    <i class="fas fa-plus mr-2"></i>Lihat Lebih Banyak
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for Image Preview -->
+    <div id="imageModal" class="fixed inset-0 bg-black/80 z-50 hidden items-center justify-center p-4">
+        <div class="relative max-w-4xl w-full">
+            <button id="closeModal" class="absolute top-4 right-4 text-white text-2xl z-10 hover:text-gray-300">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="bg-white rounded-2xl overflow-hidden">
+                <div class="h-96 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
+                    <div class="text-center">
+                        <i class="fas fa-image text-6xl text-gray-400 mb-4"></i>
+                        <p class="text-gray-600">Preview Gambar</p>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2" id="modalTitle">Judul Gambar</h3>
+                    <p class="text-gray-600" id="modalDescription">Deskripsi gambar akan tampil di sini</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="text-center">
+                <div class="flex items-center justify-center mb-6">
+                    <div class="w-12 h-12 rounded-full bg-blue-600 flex items-center justify-center text-white font-bold text-xl mr-3">DK</div>
+                    <div>
+                        <h3 class="text-xl font-bold">Desa Kapoya</h3>
+                        <p class="text-gray-400 text-sm">Website Resmi Desa</p>
+                    </div>
+                </div>
+                <p class="text-gray-400 mb-6 max-w-2xl mx-auto">
+                    Jl. Desa Kapoya Kec. Suluun Tareran Kab. Minahasa Selatan<br>
+                    Telepon: (021) 123-4567 | Email: info@desaKapoya.go.id
+                </p>
+                <div class="border-t border-gray-800 pt-6">
+                    <p class="text-gray-500 text-sm">© 2025 Desa Kapoya. Copyright by Owen Kalumata.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+    <script>
+        // Gallery filter functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.gallery-filter');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            const modal = document.getElementById('imageModal');
+            const closeModal = document.getElementById('closeModal');
+
+            // Filter functionality
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const filter = this.getAttribute('data-filter');
+                    
+                    // Update button states
+                    filterButtons.forEach(btn => {
+                        btn.classList.remove('bg-blue-500', 'text-white');
+                        btn.classList.add('bg-gray-200', 'text-gray-700');
+                    });
+                    this.classList.remove('bg-gray-200', 'text-gray-700');
+                    this.classList.add('bg-blue-500', 'text-white');
+
+                    // Filter items
+                    galleryItems.forEach(item => {
+                        if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // Modal functionality
+            galleryItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    const title = this.querySelector('h3').textContent;
+                    const description = this.querySelector('p').textContent;
+                    
+                    document.getElementById('modalTitle').textContent = title;
+                    document.getElementById('modalDescription').textContent = description;
+                    
+                    modal.classList.remove('hidden');
+                    modal.classList.add('flex');
+                });
+            });
+
+            closeModal.addEventListener('click', function() {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+            });
+
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.classList.add('hidden');
+                    modal.classList.remove('flex');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

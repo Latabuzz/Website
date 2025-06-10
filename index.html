@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desa Kapoya - Website Resmi Desa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Header & Navigation -->
+    <header class="fixed w-full z-50 bg-white/90 backdrop-blur-sm shadow-sm">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="assets/img/Logo Kapoya.jpg" 
+                     alt="Logo Desa Kapoya" 
+                     class="w-12 h-12 rounded-full object-cover mr-3 border-2 border-blue-500"
+                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                <div class="w-12 h-12 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold text-xl mr-3" style="display: none;">
+                    DK
+                </div>
+                <div class="flex flex-col">
+                    <h1 class="text-2xl font-bold text-gray-800">
+                        <span class="text-blue-500">Desa</span> Kapoya
+                    </h1>
+                    <div class="relative overflow-hidden w-48 h-5 bg-gray-100 rounded">
+                        <div id="animated-text" class="text-sm text-gray-600 font-medium absolute top-0 left-2"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <nav class="hidden md:block" id="main-nav">
+                <ul class="flex space-x-8 justify-center items-center">
+                    <li><a href="index.html" class="nav-link text-gray-700 hover:text-blue-500 font-medium">Beranda</a></li>
+                    <li><a href="profile.html" class="nav-link text-gray-700 hover:text-blue-500 font-medium">Profil Desa</a></li>
+                    <li><a href="services.html" class="nav-link text-gray-700 hover:text-blue-500 font-medium">Pelayanan</a></li>
+                    <li><a href="news.html" class="nav-link text-gray-700 hover:text-blue-500 font-medium">Berita</a></li>
+                    <li><a href="gallery.html" class="nav-link text-gray-700 hover:text-blue-500 font-medium">Galeri</a></li>
+                    <li><a href="contact.html" class="nav-link text-gray-700 hover:text-blue-500 font-medium">Kontak</a></li>
+                </ul>
+            </nav>
+            
+            <button class="md:hidden text-gray-700 focus:outline-none z-10" id="mobile-menu-button">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-16 md:pt-36 md:pb-28 relative overflow-hidden">
+        <!-- Static Background -->
+        <div class="absolute inset-0">
+            <img src="assets/img/photo-1500382017468-9049fed747ef.jpg" alt="Desa Kapoya" class="w-full h-full object-cover"/>
+        </div>
+        <!-- Overlay untuk kontras teks -->
+        <div class="absolute inset-0 bg-black/20"></div>
+        <!-- Content -->
+        <div class="container mx-auto px-4 sm:px-6 relative">
+            <div class="max-w-4xl glass-card rounded-2xl md:rounded-3xl p-4 sm:p-8 md:p-12">
+                <div class="mb-4 sm:mb-6">
+                    <span class="inline-block px-3 py-2 sm:px-4 sm:py-2 bg-blue-100 text-blue-700 rounded-full text-xs sm:text-sm font-semibold mb-4">
+                        🏡 Selamat Datang
+                    </span>
+                </div>
+                <h1 class="text-2xl sm:text-4xl md:text-6xl font-bold text-gray-900 mb-4 sm:mb-6 leading-tight">
+                    Selamat Datang di <span class="text-blue-600">Desa Kapoya</span>
+                </h1>
+                <p class="text-base sm:text-xl text-gray-700 mb-6 sm:mb-8 leading-relaxed font-medium">
+                    Desa yang Maju, Sejahtera, dan Berbudaya. Mari bersama membangun desa kita menuju masa depan yang lebih baik dengan semangat gotong royong dan kearifan lokal.
+                </p>
+                <div class="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
+                    <a href="profile.html" class="inline-flex items-center justify-center px-6 py-3 sm:px-8 sm:py-4 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 transition duration-300 text-sm sm:text-base">
+                        <i class="fas fa-compass mr-2 sm:mr-3"></i>
+                        Jelajahi Desa
+                    </a>
+                    <a href="contact.html" class="inline-flex items-center justify-center px-6 py-3 sm:px-8 sm:py-4 border-2 border-blue-600 text-blue-600 rounded-xl font-semibold hover:bg-blue-600 hover:text-white transition duration-300 text-sm sm:text-base">
+                        <i class="fas fa-envelope mr-2 sm:mr-3"></i>
+                        Hubungi Kami
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Info -->
+    <section class="py-8 bg-gradient-to-r from-blue-500 to-blue-600 text-white">
+        <div class="absolute inset-0 bg-blue-pattern opacity-10"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Data Desa</h2>
+                <p class="text-blue-100 text-lg max-w-2xl mx-auto">Informasi terkini tentang Desa Kapoya</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white/10 backdrop-blur-md p-8 rounded-2xl flex items-center hover:bg-white/20 transition-all duration-300 border border-white/20 shadow-lg">
+                    <div class="mr-6 text-5xl">
+                        <i class="fas fa-users text-blue-200"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-3xl font-bold mb-1">5,234</h3>
+                        <p class="text-blue-100 text-lg font-medium">Jiwa Penduduk</p>
+                        <p class="text-blue-200 text-sm mt-1">Data terbaru 2024</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white/10 backdrop-blur-md p-8 rounded-2xl flex items-center hover:bg-white/20 transition-all duration-300 border border-white/20 shadow-lg">
+                    <div class="mr-6 text-5xl">
+                        <i class="fas fa-map-marked-alt text-blue-200"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-3xl font-bold mb-1">12.5 km²</h3>
+                        <p class="text-blue-100 text-lg font-medium">Luas Wilayah</p>
+                        <p class="text-blue-200 text-sm mt-1">Tanah produktif</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white/10 backdrop-blur-md p-8 rounded-2xl flex items-center hover:bg-white/20 transition-all duration-300 border border-white/20 shadow-lg">
+                    <div class="mr-6 text-5xl">
+                        <i class="fas fa-home text-blue-200"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-3xl font-bold mb-1">1,452</h3>
+                        <p class="text-blue-100 text-lg font-medium">Kepala Keluarga</p>
+                        <p class="text-blue-200 text-sm mt-1">Rumah tangga aktif</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Maps Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                    Lokasi <span class="text-blue-500">Desa Kapoya</span>
+                </h2>
+                <div class="w-20 h-1 bg-blue-500 mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Temukan lokasi Desa Kapoya yang strategis dan mudah dijangkau.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Informasi Lokasi</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mr-4 mt-1">
+                                <i class="fas fa-map-marker-alt text-blue-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-1">Alamat Lengkap</h4>
+                                <p class="text-gray-600">Desa Kapoya, Kecamatan Suluun Tareran Kabupaten Minahasa Selatan</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center mr-4 mt-1">
+                                <i class="fas fa-road text-green-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-1">Akses Transportasi</h4>
+                                <p class="text-gray-600">Dapat diakses melalui jalan raya Trans Sulawesi</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 rounded-full bg-yellow-100 flex items-center justify-center mr-4 mt-1">
+                                <i class="fas fa-mountain text-yellow-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-1">Kondisi Geografis</h4>
+                                <p class="text-gray-600">Terletak di dataran tinggi</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center mr-4 mt-1">
+                                <i class="fas fa-clock text-purple-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-1">Waktu Tempuh</h4>
+                                <p class="text-gray-600">2 jam dari Manado</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="bg-gray-100 rounded-xl overflow-hidden">
+                        <div class="relative h-96">
+                            <iframe 
+                                src="https://www.google.com/maps/place/Kapoya,+Sulta,+Kabupaten+Minahasa+Selatan,+Sulawesi+Utara"
+                                width="100%" 
+                                height="100%" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade"
+                                class="rounded-xl">
+                            </iframe>
+                            <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-2 rounded-lg">
+                                <div class="flex items-center">
+                                    <div class="w-3 h-3 bg-red-500 rounded-full mr-2"></div>
+                                    <span class="text-sm font-medium text-gray-800">Desa Kapoya</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 flex flex-wrap gap-3">
+                        <a href="https://www.google.com/maps/place/Kapoya,+Sulta,+Kabupaten+Minahasa+Selatan,+Sulawesi+Utara/@1.2551201,124.5900143,13z/data=!3m1!4b1!4m10!1m2!2m1!1sDesa+Kapoya+Banawa+Donggala!3m6!1s0x328767f3f5c947df:0x587f5941ba992f05!8m2!3d1.2549134!4d124.6690605!15sChtEZXNhIEthcG95YSBCYW5hd2dhbGGSARRhZG1pbmlzdHJhdGl2ZV9hcmVhNKoBRBABMh8QASIbqQklNvTBHG4KeeV6Cc9J6QlHlfxV0cJjZH0aMh8QAiIbZGVzYSBrYXBveWEgYmFuYXdhIGRvbmdnYWxh4AEA!16s%2Fg%2F121djr3j?entry=ttu&g_ep=EgoyMDI1MDUyNy4wIKXMDSoASAFQAw%3D%3D" 
+                           target="_blank"
+                           class="flex items-center px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition duration-300">
+                            <i class="fas fa-external-link-alt mr-2"></i>
+                            Buka di Google Maps
+                        </a>
+                        <a href="#" 
+                           class="flex items-center px-4 py-2 border border-blue-500 text-blue-500 rounded-lg hover:bg-blue-50 transition duration-300">
+                            <i class="fas fa-directions mr-2"></i>
+                            Petunjuk Arah
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="text-center">
+                <div class="flex items-center justify-center mb-6">
+                    <div class="w-12 h-12 rounded-full bg-blue-600 flex items-center justify-center text-white font-bold text-xl mr-3">
+                        DK
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold">Desa Kapoya</h3>
+                        <p class="text-gray-400 text-sm">Website Resmi Desa</p>
+                    </div>
+                </div>
+                <p class="text-gray-400 mb-6 max-w-2xl mx-auto leading-relaxed">
+                    Jl. Desa Kapoya Kec. Suluun Tareran Kab. Minahasa Selatan<br>
+                    Telepon: (021) 123-4567 | Email: info@desaKapoya.go.id
+                </p>
+                <div class="border-t border-gray-800 pt-6">
+                    <p class="text-gray-500 text-sm">
+                        © 2025 Desa Kapoya. Copyright by Owen Kalumata.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+    <script>
+    // Animated text per letter - specific to index page
+    function animateText() {
+        const text = "Kapoya_Banamange";
+        const container = document.getElementById('animated-text');
+        if (!container) return;
+        
+        container.innerHTML = '';
+        
+        for (let i = 0; i < text.length; i++) {
+            const span = document.createElement('span');
+            span.textContent = text[i] === '_' ? ' ' : text[i];
+            span.style.opacity = '0';
+            span.style.transform = 'translateY(20px)';
+            span.style.transition = 'all 0.3s ease';
+            span.style.display = 'inline-block';
+            container.appendChild(span);
+            
+            setTimeout(() => {
+                span.style.opacity = '1';
+                span.style.transform = 'translateY(0)';
+            }, i * 100);
+        }
+        
+        // Reset animation after all letters are shown
+        setTimeout(() => {
+            animateText();
+        }, text.length * 100 + 2000);
+    }
+
+    // Start animation when page loads
+    document.addEventListener('DOMContentLoaded', function() {
+        animateText();
+        
+        // Ensure mobile menu works on mobile devices
+        const mobileMenuBtn = document.getElementById('mobile-menu-button');
+        if (mobileMenuBtn) {
+            // Add touch event for mobile
+            mobileMenuBtn.addEventListener('touchstart', function(e) {
+                e.preventDefault();
+                this.click();
+            });
+        }
+    });
+    </script>
+    <style>
+    .animate-marquee {
+        animation: none;
+    }
+    
+    /* Mobile menu fixes */
+    #mobile-menu-button {
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: transparent;
+    }
+    
+    /* Ensure mobile menu items are clickable */
+    #mobile-menu a {
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: rgba(59, 130, 246, 0.3);
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+    }
+    </style>
+</body>
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berita - Desa Kapoya</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Header & Navigation -->
+    <header class="fixed w-full z-50 bg-white/90 backdrop-blur-sm shadow-sm">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="assets/img/Logo Kapoya.jpg" 
+                     alt="Logo Desa Kapoya" 
+                     class="w-12 h-12 rounded-full object-cover mr-3 border-2 border-blue-500"
+                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                <div class="w-12 h-12 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold text-xl mr-3" style="display: none;">DK</div>
+                <div>
+                    <h1 class="text-2xl font-bold text-gray-800">
+                        <span class="text-blue-500">Desa</span> Kapoya
+                    </h1>
+                    <p class="text-sm text-gray-600">Berita & Informasi</p>
+                </div>
+            </div>
+            
+            <nav class="hidden md:block">
+                <ul class="flex space-x-8">
+                    <li><a href="index.html" class="nav-link text-gray-700 hover:text-blue-500 font-medium">Beranda</a></li>
+                    <li><a href="profile.html" class="nav-link text-gray-700 hover:text-blue-500 font-medium">Profil Desa</a></li>
+                    <li><a href="services.html" class="nav-link text-gray-700 hover:text-blue-500 font-medium">Pelayanan</a></li>
+                    <li><a href="news.html" class="nav-link text-blue-500 font-medium border-b-2 border-blue-500">Berita</a></li>
+                    <li><a href="gallery.html" class="nav-link text-gray-700 hover:text-blue-500 font-medium">Galeri</a></li>
+                    <li><a href="contact.html" class="nav-link text-gray-700 hover:text-blue-500 font-medium">Kontak</a></li>
+                </ul>
+            </nav>
+            
+            <button class="md:hidden text-gray-700 focus:outline-none" id="mobile-menu-button">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-16 bg-gradient-to-r from-purple-500 to-purple-600">
+        <div class="container mx-auto px-4 text-center text-white">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Berita Desa Kapoya</h1>
+            <p class="text-xl opacity-90 max-w-2xl mx-auto">Informasi terkini seputar kegiatan, program, dan perkembangan Desa Kapoya</p>
+        </div>
+    </section>
+
+    <!-- Featured News -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Berita Utama</h2>
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <div class="md:flex">
+                        <div class="md:w-1/2">
+                            <div class="h-64 md:h-full bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center">
+                                <div class="text-center">
+                                    <i class="fas fa-newspaper text-6xl text-blue-500 mb-4"></i>
+                                    <p class="text-gray-600">Foto Berita Utama</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="md:w-1/2 p-8">
+                            <div class="flex items-center mb-4">
+                                <span class="px-3 py-1 bg-red-100 text-red-700 rounded-full text-sm font-semibold">Breaking News</span>
+                                <span class="ml-3 text-sm text-gray-500">2 jam yang lalu</span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-800 mb-4">Desa Kapoya Raih Penghargaan Desa Terbaik 2024</h3>
+                            <p class="text-gray-600 mb-6">Pemerintah Desa Kapoya berhasil meraih penghargaan sebagai Desa Terbaik tingkat Kabupaten Minahasa Selatan tahun 2024. Penghargaan ini diberikan atas prestasi dalam bidang pembangunan infrastruktur, pemberdayaan masyarakat, dan inovasi pelayanan publik.</p>
+                            <button class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors duration-300">
+                                Baca Selengkapnya
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- News Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- News Item 1 -->
+                <article class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <div class="h-48 bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center">
+                        <div class="text-center">
+                            <i class="fas fa-seedling text-4xl text-green-500 mb-2"></i>
+                            <p class="text-sm text-gray-600">Program Pertanian</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="px-2 py-1 bg-green-100 text-green-700 rounded text-xs font-semibold">Pertanian</span>
+                            <span class="ml-2 text-xs text-gray-500">15 Januari 2025</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-800 mb-3">Program Pertanian Organik Sukses Tingkatkan Hasil Panen</h3>
+                        <p class="text-gray-600 text-sm mb-4">Petani Desa Kapoya mengalami peningkatan hasil panen hingga 30% setelah mengikuti program pertanian organik yang dicanangkan pemerintah desa.</p>
+                        <a href="#" class="text-blue-500 hover:text-blue-600 font-semibold text-sm">Baca Selengkapnya →</a>
+                    </div>
+                </article>
+
+                <!-- News Item 2 -->
+                <article class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <div class="h-48 bg-gradient-to-br from-yellow-100 to-yellow-200 flex items-center justify-center">
+                        <div class="text-center">
+                            <i class="fas fa-graduation-cap text-4xl text-yellow-500 mb-2"></i>
+                            <p class="text-sm text-gray-600">Pendidikan</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="px-2 py-1 bg-yellow-100 text-yellow-700 rounded text-xs font-semibold">Pendidikan</span>
+                            <span class="ml-2 text-xs text-gray-500">12 Januari 2025</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-800 mb-3">Perpustakaan Desa Diresmikan untuk Tingkatkan Literasi</h3>
+                        <p class="text-gray-600 text-sm mb-4">Perpustakaan desa yang baru diresmikan dilengkapi dengan koleksi buku lengkap dan fasilitas internet gratis untuk warga.</p>
+                        <a href="#" class="text-blue-500 hover:text-blue-600 font-semibold text-sm">Baca Selengkapnya →</a>
+                    </div>
+                </article>
+
+                <!-- News Item 3 -->
+                <article class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <div class="h-48 bg-gradient-to-br from-red-100 to-red-200 flex items-center justify-center">
+                        <div class="text-center">
+                            <i class="fas fa-heart text-4xl text-red-500 mb-2"></i>
+                            <p class="text-sm text-gray-600">Kesehatan</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="px-2 py-1 bg-red-100 text-red-700 rounded text-xs font-semibold">Kesehatan</span>
+                            <span class="ml-2 text-xs text-gray-500">10 Januari 2025</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-800 mb-3">Posyandu Balita Raih Prestasi Terbaik Kecamatan</h3>
+                        <p class="text-gray-600 text-sm mb-4">Posyandu Desa Kapoya meraih penghargaan terbaik tingkat kecamatan berkat inovasi program kesehatan balita.</p>
+                        <a href="#" class="text-blue-500 hover:text-blue-600 font-semibold text-sm">Baca Selengkapnya →</a>
+                    </div>
+                </article>
+
+                <!-- News Item 4 -->
+                <article class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <div class="h-48 bg-gradient-to-br from-purple-100 to-purple-200 flex items-center justify-center">
+                        <div class="text-center">
+                            <i class="fas fa-tools text-4xl text-purple-500 mb-2"></i>
+                            <p class="text-sm text-gray-600">Infrastruktur</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="px-2 py-1 bg-purple-100 text-purple-700 rounded text-xs font-semibold">Infrastruktur</span>
+                            <span class="ml-2 text-xs text-gray-500">8 Januari 2025</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-800 mb-3">Pembangunan Jalan Beton Selesai 100%</h3>
+                        <p class="text-gray-600 text-sm mb-4">Proyek pembangunan jalan beton sepanjang 2 km di wilayah Desa Kapoya telah selesai dan siap digunakan masyarakat.</p>
+                        <a href="#" class="text-blue-500 hover:text-blue-600 font-semibold text-sm">Baca Selengkapnya →</a>
+                    </div>
+                </article>
+
+                <!-- News Item 5 -->
+                <article class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <div class="h-48 bg-gradient-to-br from-indigo-100 to-indigo-200 flex items-center justify-center">
+                        <div class="text-center">
+                            <i class="fas fa-users text-4xl text-indigo-500 mb-2"></i>
+                            <p class="text-sm text-gray-600">Sosial</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="px-2 py-1 bg-indigo-100 text-indigo-700 rounded text-xs font-semibold">Sosial</span>
+                            <span class="ml-2 text-xs text-gray-500">5 Januari 2025</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-800 mb-3">Gotong Royong Bersihkan Lingkungan Desa</h3>
+                        <p class="text-gray-600 text-sm mb-4">Seluruh warga Desa Kapoya berpartisipasi dalam kegiatan gotong royong membersihkan lingkungan menjelang perayaan tahun baru.</p>
+                        <a href="#" class="text-blue-500 hover:text-blue-600 font-semibold text-sm">Baca Selengkapnya →</a>
+                    </div>
+                </article>
+
+                <!-- News Item 6 -->
+                <article class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <div class="h-48 bg-gradient-to-br from-teal-100 to-teal-200 flex items-center justify-center">
+                        <div class="text-center">
+                            <i class="fas fa-microphone text-4xl text-teal-500 mb-2"></i>
+                            <p class="text-sm text-gray-600">Pengumuman</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="px-2 py-1 bg-teal-100 text-teal-700 rounded text-xs font-semibold">Pengumuman</span>
+                            <span class="ml-2 text-xs text-gray-500">3 Januari 2025</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-800 mb-3">Pendaftaran Program BLT Desa Dibuka</h3>
+                        <p class="text-gray-600 text-sm mb-4">Pemerintah Desa Kapoya membuka pendaftaran program Bantuan Langsung Tunai (BLT) untuk keluarga kurang mampu periode 2025.</p>
+                        <a href="#" class="text-blue-500 hover:text-blue-600 font-semibold text-sm">Baca Selengkapnya →</a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Pagination -->
+            <div class="flex justify-center mt-12">
+                <nav class="flex space-x-2">
+                    <button class="px-4 py-2 text-gray-600 bg-white rounded-lg border hover:bg-gray-50">
+                        <i class="fas fa-chevron-left mr-2"></i>Sebelumnya
+                    </button>
+                    <button class="px-4 py-2 bg-blue-500 text-white rounded-lg">1</button>
+                    <button class="px-4 py-2 text-gray-600 bg-white rounded-lg border hover:bg-gray-50">2</button>
+                    <button class="px-4 py-2 text-gray-600 bg-white rounded-lg border hover:bg-gray-50">3</button>
+                    <button class="px-4 py-2 text-gray-600 bg-white rounded-lg border hover:bg-gray-50">
+                        Selanjutnya<i class="fas fa-chevron-right ml-2"></i>
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="text-center">
+                <div class="flex items-center justify-center mb-6">
+                    <div class="w-12 h-12 rounded-full bg-blue-600 flex items-center justify-center text-white font-bold text-xl mr-3">DK</div>
+                    <div>
+                        <h3 class="text-xl font-bold">Desa Kapoya</h3>
+                        <p class="text-gray-400 text-sm">Website Resmi Desa</p>
+                    </div>
+                </div>
+                <p class="text-gray-400 mb-6 max-w-2xl mx-auto">
+                    Jl. Desa Kapoya Kec. Suluun Tareran Kab. Minahasa Selatan<br>
+                    Telepon: (021) 123-4567 | Email: info@desaKapoya.go.id
+                </p>
+                <div class="border-t border-gray-800 pt-6">
+                    <p class="text-gray-500 text-sm">© 2025 Desa Kapoya. Copyright by Owen Kalumata.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

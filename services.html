@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pelayanan - Desa Kapoya</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Header & Navigation -->
+    <header class="fixed w-full z-50 bg-white/90 backdrop-blur-sm shadow-sm">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="assets/img/Logo Kapoya.jpg" 
+                     alt="Logo Desa Kapoya" 
+                     class="w-12 h-12 rounded-full object-cover mr-3 border-2 border-blue-500"
+                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                <div class="w-12 h-12 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold text-xl mr-3" style="display: none;">DK</div>
+                <div>
+                    <h1 class="text-2xl font-bold text-gray-800">
+                        <span class="text-blue-500">Desa</span> Kapoya
+                    </h1>
+                    <p class="text-sm text-gray-600">Pelayanan Publik</p>
+                </div>
+            </div>
+            
+            <nav class="hidden md:block">
+                <ul class="flex space-x-8">
+                    <li><a href="index.html" class="nav-link text-gray-700 hover:text-blue-500 font-medium">Beranda</a></li>
+                    <li><a href="profile.html" class="nav-link text-gray-700 hover:text-blue-500 font-medium">Profil Desa</a></li>
+                    <li><a href="services.html" class="nav-link text-blue-500 font-medium border-b-2 border-blue-500">Pelayanan</a></li>
+                    <li><a href="news.html" class="nav-link text-gray-700 hover:text-blue-500 font-medium">Berita</a></li>
+                    <li><a href="gallery.html" class="nav-link text-gray-700 hover:text-blue-500 font-medium">Galeri</a></li>
+                    <li><a href="contact.html" class="nav-link text-gray-700 hover:text-blue-500 font-medium">Kontak</a></li>
+                </ul>
+            </nav>
+            
+            <button class="md:hidden text-gray-700 focus:outline-none" id="mobile-menu-button">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-16 bg-gradient-to-r from-green-500 to-green-600">
+        <div class="container mx-auto px-4 text-center text-white">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Pelayanan Desa</h1>
+            <p class="text-xl opacity-90 max-w-2xl mx-auto">Berbagai layanan administrasi dan publik untuk kemudahan warga Desa Kapoya</p>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Surat Keterangan Domisili -->
+                <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-home text-2xl text-blue-500"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Surat Keterangan Domisili</h3>
+                    <p class="text-gray-600 mb-4">Layanan pembuatan surat keterangan domisili untuk keperluan administrasi warga.</p>
+                    <div class="space-y-2 mb-4">
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i class="fas fa-clock mr-2 text-green-500"></i>
+                            <span>Waktu: 1-2 hari kerja</span>
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i class="fas fa-money-bill mr-2 text-green-500"></i>
+                            <span>Biaya: Gratis</span>
+                        </div>
+                    </div>
+                    <button class="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition-colors duration-300">
+                        Ajukan Permohonan
+                    </button>
+                </div>
+
+                <!-- Surat Keterangan Usaha -->
+                <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-store text-2xl text-green-500"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Surat Keterangan Usaha</h3>
+                    <p class="text-gray-600 mb-4">Layanan pembuatan surat keterangan usaha untuk UMKM dan bisnis lokal.</p>
+                    <div class="space-y-2 mb-4">
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i class="fas fa-clock mr-2 text-green-500"></i>
+                            <span>Waktu: 2-3 hari kerja</span>
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i class="fas fa-money-bill mr-2 text-green-500"></i>
+                            <span>Biaya: Rp 10.000</span>
+                        </div>
+                    </div>
+                    <button class="w-full bg-green-500 text-white py-2 rounded-lg hover:bg-green-600 transition-colors duration-300">
+                        Ajukan Permohonan
+                    </button>
+                </div>
+
+                <!-- Surat Keterangan Tidak Mampu -->
+                <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-hand-holding-heart text-2xl text-yellow-500"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Surat Keterangan Tidak Mampu</h3>
+                    <p class="text-gray-600 mb-4">Layanan untuk warga yang membutuhkan bantuan dan program sosial.</p>
+                    <div class="space-y-2 mb-4">
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i class="fas fa-clock mr-2 text-green-500"></i>
+                            <span>Waktu: 1-2 hari kerja</span>
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i class="fas fa-money-bill mr-2 text-green-500"></i>
+                            <span>Biaya: Gratis</span>
+                        </div>
+                    </div>
+                    <button class="w-full bg-yellow-500 text-white py-2 rounded-lg hover:bg-yellow-600 transition-colors duration-300">
+                        Ajukan Permohonan
+                    </button>
+                </div>
+
+                <!-- Pengantar KTP -->
+                <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-id-card text-2xl text-red-500"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Pengantar KTP</h3>
+                    <p class="text-gray-600 mb-4">Layanan pengantar untuk pembuatan atau perpanjangan KTP di Dukcapil.</p>
+                    <div class="space-y-2 mb-4">
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i class="fas fa-clock mr-2 text-green-500"></i>
+                            <span>Waktu: 1 hari kerja</span>
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i class="fas fa-money-bill mr-2 text-green-500"></i>
+                            <span>Biaya: Gratis</span>
+                        </div>
+                    </div>
+                    <button class="w-full bg-red-500 text-white py-2 rounded-lg hover:bg-red-600 transition-colors duration-300">
+                        Ajukan Permohonan
+                    </button>
+                </div>
+
+                <!-- Pengantar Kartu Keluarga -->
+                <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-users text-2xl text-purple-500"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Pengantar Kartu Keluarga</h3>
+                    <p class="text-gray-600 mb-4">Layanan pengantar untuk pembuatan atau perubahan Kartu Keluarga.</p>
+                    <div class="space-y-2 mb-4">
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i class="fas fa-clock mr-2 text-green-500"></i>
+                            <span>Waktu: 1-2 hari kerja</span>
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i class="fas fa-money-bill mr-2 text-green-500"></i>
+                            <span>Biaya: Gratis</span>
+                        </div>
+                    </div>
+                    <button class="w-full bg-purple-500 text-white py-2 rounded-lg hover:bg-purple-600 transition-colors duration-300">
+                        Ajukan Permohonan
+                    </button>
+                </div>
+
+                <!-- Legalisir Dokumen -->
+                <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-stamp text-2xl text-indigo-500"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Legalisir Dokumen</h3>
+                    <p class="text-gray-600 mb-4">Layanan legalisir dokumen resmi untuk keperluan administrasi.</p>
+                    <div class="space-y-2 mb-4">
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i class="fas fa-clock mr-2 text-green-500"></i>
+                            <span>Waktu: 1 hari kerja</span>
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i class="fas fa-money-bill mr-2 text-green-500"></i>
+                            <span>Biaya: Rp 5.000/dokumen</span>
+                        </div>
+                    </div>
+                    <button class="w-full bg-indigo-500 text-white py-2 rounded-lg hover:bg-indigo-600 transition-colors duration-300">
+                        Ajukan Permohonan
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prosedur Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Prosedur Pelayanan</h2>
+                <div class="w-20 h-1 bg-blue-500 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">Ikuti langkah-langkah berikut untuk mendapatkan pelayanan yang optimal</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Step 1 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4 text-white text-xl font-bold">1</div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">Persiapan Dokumen</h3>
+                    <p class="text-gray-600">Siapkan dokumen yang diperlukan sesuai jenis layanan</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4 text-white text-xl font-bold">2</div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">Pengajuan</h3>
+                    <p class="text-gray-600">Datang ke kantor desa atau ajukan secara online</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-4 text-white text-xl font-bold">3</div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">Verifikasi</h3>
+                    <p class="text-gray-600">Petugas akan memverifikasi dokumen dan data</p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4 text-white text-xl font-bold">4</div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">Selesai</h3>
+                    <p class="text-gray-600">Dokumen siap diambil sesuai waktu yang ditentukan</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Info -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="bg-white rounded-2xl p-8 shadow-lg">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Informasi Pelayanan</h2>
+                    <p class="text-gray-600">Hubungi kami untuk informasi lebih lanjut tentang pelayanan desa</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-clock text-2xl text-blue-500"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">Jam Pelayanan</h3>
+                        <p class="text-gray-600">Senin - Jumat<br>08:00 - 16:00 WITA</p>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-phone text-2xl text-green-500"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">Telepon</h3>
+                        <p class="text-gray-600">(021) 123-4567<br>WhatsApp: 0812-3456-7890</p>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-map-marker-alt text-2xl text-yellow-500"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">Lokasi</h3>
+                        <p class="text-gray-600">Kantor Desa Kapoya<br>Jl. Raya Kapoya No. 123</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="text-center">
+                <div class="flex items-center justify-center mb-6">
+                    <div class="w-12 h-12 rounded-full bg-blue-600 flex items-center justify-center text-white font-bold text-xl mr-3">DK</div>
+                    <div>
+                        <h3 class="text-xl font-bold">Desa Kapoya</h3>
+                        <p class="text-gray-400 text-sm">Website Resmi Desa</p>
+                    </div>
+                </div>
+                <p class="text-gray-400 mb-6 max-w-2xl mx-auto">
+                    Jl. Desa Kapoya Kec. Suluun Tareran Kab. Minahasa Selatan<br>
+                    Telepon: (021) 123-4567 | Email: info@desaKapoya.go.id
+                </p>
+                <div class="border-t border-gray-800 pt-6">
+                    <p class="text-gray-500 text-sm">© 2025 Desa Kapoya. Copyright by Owen Kalumata.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+    <script>
+        // Service form handling - clean version
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('button').forEach(button => {
+                if (button.textContent.trim() === 'Ajukan Permohonan') {
+                    button.addEventListener('click', function() {
+                        const serviceName = this.closest('.bg-white').querySelector('h3').textContent;
+                        const message = `Halo, saya ingin mengajukan permohonan ${serviceName}. Mohon informasi prosedur dan persyaratannya.`;
+                        const whatsappUrl = `https://wa.me/6281234567890?text=${encodeURIComponent(message)}`;
+                        
+                        if (confirm(`Anda akan dialihkan ke WhatsApp untuk mengajukan ${serviceName}. Lanjutkan?`)) {
+                            window.open(whatsappUrl, '_blank');
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
